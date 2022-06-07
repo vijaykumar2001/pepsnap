@@ -30,6 +30,8 @@ video {
     right: 5rem;
     color: white;
     z-index : 2;
+  
+
 }
 
 .action-cont > * {
@@ -93,3 +95,16 @@ video {
         transform : scale(1.1)
     }
    }
+
+.timer-cont {
+    position: absolute;
+    bottom : 5rem;
+    left : 5rem;
+    color: red;
+    font-size: x-large;
+
+}
+
+.timer{
+    display: none;
+}
