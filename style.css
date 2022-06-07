@@ -29,10 +29,7 @@ video {
     top: calc( ( 100vh - 12rem ) / 2 );
     right: 5rem;
     color: white;
-
     z-index : 2;
-  
-
 }
 
 .action-cont > * {
@@ -51,7 +48,7 @@ video {
     width: 3rem;
     border-radius: 50%
 }
-
+ 
 .capture-btn{
     background-color: white;
     height: 3rem;
