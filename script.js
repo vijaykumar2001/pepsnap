@@ -109,6 +109,9 @@ captBtnCont.addEventListener("click", (e) => {
     let tool = canvas.getContext("2d");
     tool.drawImage(video,0,0,canvas.width,canvas.height);
 
+    tool.fillStyle = transparentColor;
+    tool.fillRect(0,0,canvas.width, canvas.height)
+
     let imageURL = canvas.toDataURL();
     let a = document.createElement("a");
     a.href = imageURL
