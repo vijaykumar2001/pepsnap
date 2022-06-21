@@ -6,6 +6,7 @@ let captBtn = document.querySelector(".capture-btn")
 let timer = document.querySelector(".timer")
 let recorder;
 let recordFlag = false;
+let transparentColor = "transparent"
 
 let constraint = {
     video : true,  //true
@@ -99,3 +100,29 @@ function stopTimer() {
   timer.style.display = "none";
   
 }
+
+captBtnCont.addEventListener("click", (e) => {
+    let canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    let tool = canvas.getContext("2d");
+    tool.drawImage(video,0,0,canvas.width,canvas.height);
+
+    let imageURL = canvas.toDataURL();
+    let a = document.createElement("a");
+    a.href = imageURL
+    a.download = "captureimage.jpg"
+    a.click();
+
+})
+
+let allfilters = document.querySelectorAll(".filter")
+let filterLayer = document.querySelector(".filter-layer")
+allfilters.forEach((filterElem) =>
+{
+  filterElem.addEventListener("click", (e) => {
+    transparentColor = getComputedStyle(filterElem).getPropertyValue("background-color")
+    filterLayer.style.backgroundColor = transparentColor;
+  })
+})

@@ -108,3 +108,46 @@ video {
 .timer{
     display: none;
 }
+
+.filter-cont {
+    position: absolute;
+    top: calc( ( 100vh - 12rem ) / 2 );
+    left : 5rem;
+    height: 12rem;
+    width: 5rem;
+    background-color: yellow;
+    z-index : 2;
+}
+
+.filter {
+    height: 3rem;
+    background-size: 100% 100%;
+    background-image: url(https://picsum.photos/seed/picsum/200/300);
+    background-repeat: none;
+    background-blend-mode: color-burn;
+}
+
+.orange {
+    background-color: rgba(156, 126, 69, 0.231);
+}
+
+.blue {
+    background-color: rgba(116, 116, 184, 0.217);
+}
+
+.green {
+    background-color: rgba(79, 138, 79, 0.322);
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.filter-layer {
+    width: 100vw;
+    height : 100vh;
+    top:0;
+    left:0;
+    position: absolute;
+    z-index: 1;
+}
